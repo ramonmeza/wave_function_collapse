@@ -17,9 +17,9 @@ class Tiles(IntEnum):
 MAP_HEIGHT: int = 32
 MAP_WIDTH: int = 48
 WEIGHTS: dict[Tiles, float] = {
-    Tiles.SEA: 1.0,
-    Tiles.COAST: 0.5,
-    Tiles.LAND: 0.5,
+    Tiles.SEA: 1.1,
+    Tiles.COAST: 0.6,
+    Tiles.LAND: 1.0,
 }
 
 
@@ -81,7 +81,7 @@ def get_neighbors(i: int, grid: list[list[Tiles]], rows: int, cols: int) -> Neig
 
 
 # connections list
-CONNECTIONS: list[Connection] = [
+CONNECTIONS: set[Connection] = set([
     # sea connects to sea from all directions
     Connection(Tiles.SEA, Tiles.SEA, Directions.UP),
     Connection(Tiles.SEA, Tiles.SEA, Directions.DOWN),
@@ -124,7 +124,7 @@ CONNECTIONS: list[Connection] = [
     Connection(Tiles.LAND, Tiles.COAST, Directions.DOWN),
     Connection(Tiles.LAND, Tiles.COAST, Directions.LEFT),
     Connection(Tiles.LAND, Tiles.COAST, Directions.RIGHT),
-]
+])
 
 
 # main entry

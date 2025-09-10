@@ -5,10 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Module",
+            "name": "Debug: wave_function_collapse",
             "type": "debugpy",
             "request": "launch",
             "module": "wave_function_collapse"
+        },
+        {
+            "name": "Debug: simpler.py",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wave_function_collapse.simpler"
+        },
+        {
+            "name": "Debug: simpler_with_overlapping.py",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "wave_function_collapse.simpler_with_overlapping"
         }
     ]
 }
