@@ -6,7 +6,7 @@ _Example of a simplified WFC implementation with overlapping model_
 
 
 ## Intro
-This isn't meant to be a tutorial and it's probably not the greatest reference. This is just my own sandbox for trying to make sense of wave function collapse. If you have suggestions, please make an issue and let's start a discussion. These algorithms can be difficult for me to wrap my mind around at times, so all perspectives are appreciated.
+This isn't meant to be a tutorial and it's probably not the greatest reference. This is just my own sandbox for trying to make sense of wave function collapse. Code will be wrong. It will be broken and it will probably crash at times. That's just part of my learning process. If you have suggestions, please make an issue and let's start a discussion. These algorithms can be difficult for me to wrap my mind around at times, so all perspectives are appreciated.
 
 #### Notes
 - I use `cell` and `tile` interchangeably.
@@ -14,6 +14,9 @@ This isn't meant to be a tutorial and it's probably not the greatest reference. 
 - I'll say `sample map` and `input map`, referencing the same thing.
 
 _I do all of this intentionally, of course._ 😂
+
+Also, this is written chronologically, where each chapter is a step further into my understanding of WFC. My first implementations will be wrong, but hopefully through time, the final chapter will be my completed WFC implementation.
+
 
 ## Simplified WFC
 [`simpler.py`](src/wave_function_collapse/simpler.py)
@@ -60,7 +63,7 @@ In this implementation, I started with a copy of `simpler.py`. I wanted to modif
 
 ### Limitations
 - Certain input maps will cause the algorithm to break when a rule doesn't exist. If `SEA` defines no connection rules for a neighbor, that means if `SEA` is placed, it will have no possible neighbors.
-- Whether this is actual overlapping... I highly doubt it. But the algorithm is definitely derived from the ideas behind the overlapping model presented in WFC.
+- This isn't actually WFC or overlapping model, but the algorithm is definitely derived from the ideas behind the overlapping model presented in WFC.
 
 ### Output Examples
 Run : `python simpler_with_overlapping.py`<br/>
@@ -76,6 +79,13 @@ You can play around with changing the `sample_map` within the `main()` function.
 
 
 ## Todos
+### WFC Faithfulness
+- Recursive neighbor propagation
+- Proper application of weights
+- Use Shannon entropy
+- Read more about WFC
+- Try a proper implementation of WFC now
+
 ### Tileset Complexity
 More tiles with more constraints. Some transitional tiles will be cool to see. Also, corner tiles that only align in one way.
 
